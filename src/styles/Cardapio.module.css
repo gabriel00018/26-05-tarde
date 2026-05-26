@@ -1,0 +1,243 @@
+.pageContainer {
+    min-height: calc(100vh - 80px - 100px);
+    background-color: #f8f9fc;
+    padding: 40px;
+    font-family: 'Lato', sans-serif;
+}
+
+.header {
+    margin-bottom: 32px;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #000;
+    border-left: 5px solid #d70000;
+    padding-left: 16px;
+}
+
+.categoriaTitulo {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #eee;
+}
+
+.categoriaSection {
+    margin-bottom: 40px;
+}
+
+.cardsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.cardIndisponivel {
+    opacity: 0.6;
+}
+
+.cardTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.cardNome {
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+    margin: 0;
+}
+
+.cardDescricao {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.cardPreco {
+    font-size: 20px;
+    font-weight: 700;
+    color: #d70000;
+    margin: 4px 0 0;
+}
+
+.badgeIndisponivel {
+    background-color: #f8d7da;
+    color: #842029;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 999px;
+    white-space: nowrap;
+}
+
+/* Botões ADM */
+.botoesAdmin {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.btnEditar {
+    flex: 1;
+    background-color: transparent;
+    border: 1px solid #d70000;
+    color: #d70000;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: 'Lato', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btnEditar:hover {
+    background-color: #d70000;
+    color: white;
+}
+
+.btnExcluir {
+    flex: 1;
+    background-color: transparent;
+    border: 1px solid #dc3545;
+    color: #dc3545;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: 'Lato', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btnExcluir:hover {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Formulário de edição inline */
+.formEdicao {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.inputEdicao {
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-family: 'Lato', sans-serif;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.inputEdicao:focus {
+    outline: none;
+    border-color: #d70000;
+    box-shadow: 0 0 0 2px rgba(215,0,0,0.1);
+}
+
+.checkboxLabel {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-family: 'Lato', sans-serif;
+    cursor: pointer;
+}
+
+.botoesEdicao {
+    display: flex;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.btnSalvar {
+    flex: 1;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'Lato', sans-serif;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btnSalvar:hover { background-color: #218838; }
+
+.btnCancelar {
+    flex: 1;
+    background-color: transparent;
+    border: 1px solid #999;
+    color: #666;
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'Lato', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btnCancelar:hover { background-color: #eee; }
+
+/* Toast */
+.toast {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 16px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    animation: slideDown 0.3s ease;
+}
+
+.toastErro { background-color: #ffe0e0; color: #c1121f; border-left: 4px solid #d70000; }
+.toastSucesso { background-color: #e0ffe0; color: #1a7a1a; border-left: 4px solid #28a745; }
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.loadingText { color: #888; font-size: 15px; }
+.emptyText { color: #999; font-size: 16px; text-align: center; margin-top: 60px; }
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .pageContainer { padding: 20px 16px; }
+    .title { font-size: 24px; }
+    .cardsGrid { grid-template-columns: 1fr; }
+}
